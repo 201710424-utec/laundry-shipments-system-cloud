@@ -31,5 +31,5 @@
 *.out
 *.app
 
-# User data of laundry-shipments-system aplication
-src/db/
+# Target folder
+laundry-shipments-system/

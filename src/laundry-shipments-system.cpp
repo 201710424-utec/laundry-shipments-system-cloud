@@ -116,8 +116,9 @@ void printTicket() {
 
 int main(int argc, char const *argv[]) {
   int option;
+  std::string assets_path = "assets/";
   while (true) {
-    option = menuFile("menus/principal");
+    option = menuFile(assets_path + "menus/principal");
     switch (option) {
       case 1:
         createCloth();
