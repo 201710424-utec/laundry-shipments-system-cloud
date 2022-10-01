@@ -69,10 +69,10 @@ bool generateTicket() {
   std::cin.ignore();
   getline(std::cin, category);
   while (category != "exit") {
-    if (category == "bividies") {
+    if (category == "bividies" || category == "chicles") {
       int amount;
       std::cin >> amount;
-      line = std::to_string(amount) + " " + "bividies\n\n";
+      line = std::to_string(amount) + " " + category + "\n\n";
       ticket << line;
       totalCloths += amount;
     }else{
@@ -117,10 +117,13 @@ int main(int argc, char const *argv[]) {
     switch (option) {
       case 1:
         createCloth();
+        break;
       case 2:
         generateTicket();
+        break;
       case 3:
         printTicket();
+        break;
     }
   }
   return 0;
