@@ -2,8 +2,10 @@
 #include <fstream> //fstream
 #include <string> //std::string std::to_string
 #include <string.h> //c_str
-#include <sys/stat.h> //mkdir en duda
-#include <sys/types.h> //mkdir en duda
+
+#include <filesystem> //create_directories()
+namespace fs = std::filesystem;
+
 #include <stdlib.h> //_Exit()
 
 bool createCloth() {
@@ -12,6 +14,7 @@ bool createCloth() {
   std::cin.ignore();
   getline(std::cin, category);
   getline(std::cin, name);
+  fs::create_directories("db/categories/");
   std::string path = "db/categories/"+category;
   std::fstream fCategory;
   fCategory.open(path, std::fstream::app);
@@ -65,6 +68,7 @@ bool generateTicket() {
   std::cout << "Fecha: ";
   std::cin >> date;
   std::fstream ticket;
+  fs::create_directories("db/tickets/");
   ticket.open("db/tickets/" + date, std::fstream::app);
   std::cin.ignore();
   getline(std::cin, category);
@@ -113,7 +117,7 @@ void printTicket() {
 int main(int argc, char const *argv[]) {
   int option;
   while (true) {
-    option = menuFile("src/principal");
+    option = menuFile("menus/principal");
     switch (option) {
       case 1:
         createCloth();
