@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# User data of laundry-shipments-system aplication
+src/db/
