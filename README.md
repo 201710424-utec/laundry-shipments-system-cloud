@@ -4,7 +4,11 @@
 
 ## Aplicación
 
-Sistema de registro de envios a lavandería.
+Sistema de registro de envíos a lavandería.
+
+### Origen
+
+Fork de un proyecto personal disponible en el siguiente [repositorio](https://github.com/matapanchos/laundry-shipments-system).
 
 ### Características
 
@@ -32,6 +36,8 @@ En este sentido, se planea terminar con una arquitectura como la que muestra el 
 ![microServices_architecture](documentation/app_architecture/microServices/microServices_diagram.drawio.png)
 
 Esto permitirá realizar las pruebas, experimentos y despliegue de la aplicación en tecnologías cloud.
+
+Para ello se hará uso del framework [C++ Micro Services](https://cppmicroservices.org/).
 
 ### Instanciación/Ejecución
 
