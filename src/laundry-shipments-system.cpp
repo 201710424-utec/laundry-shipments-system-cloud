@@ -23,6 +23,7 @@ bool createCloth() {
     getline(std::cin, name);
   }
   fCategory.close();
+  return true;
 }
 
 void printFile(std::string filePath) {
@@ -100,6 +101,7 @@ bool generateTicket() {
   ticket << "\n\t···";
   ticket << "\n\t" << ++totalCloths;
   ticket.close();
+  return true;
 }
 
 void printTicket() {
